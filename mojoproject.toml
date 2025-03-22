@@ -2,10 +2,16 @@
 authors = ["ImKKingshuk"]
 channels = ["https://conda.modular.com/max-nightly", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community", "conda-forge"]
 name = "hypermojo"
-platforms = ["osx-arm64"]
+platforms = ["osx-arm64", "linux-x86_64"]
 version = "0.1.0"
+description = "A lightweight web framework for Mojo"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/ImKKingshuk/HyperMojo"
 
 [tasks]
+run_basic_example = "mojo run examples/basic_app.mojo"
+run_advanced_example = "mojo run examples/advanced_app.mojo"
 
 [dependencies]
 max = "*"
