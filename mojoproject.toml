@@ -3,15 +3,21 @@ authors = ["ImKKingshuk"]
 channels = ["https://conda.modular.com/max-nightly", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community", "conda-forge"]
 name = "hypermojo"
 platforms = ["osx-arm64", "linux-x86_64"]
-version = "0.1.0"
-description = "A lightweight web framework for Mojo"
+version = "2.0.0"
+description = "The ultimate web framework for Mojo - modular, secure, and feature-rich"
 readme = "README.md"
-license = "MIT"
+license = "GPL-3.0"
 repository = "https://github.com/ImKKingshuk/HyperMojo"
+keywords = ["web-framework", "mojo", "http", "api", "web-development"]
+classifiers = ["Development Status :: 4 - Beta", "Intended Audience :: Developers", "Topic :: Internet :: WWW/HTTP :: HTTP Servers"]
 
 [tasks]
-run_basic_example = "mojo run examples/basic_app.mojo"
-run_advanced_example = "mojo run examples/advanced_app.mojo"
+run_demo = "mojo run ultimate_demo.mojo"
+run_basic = "mojo run examples/basic_app.mojo"
+run_advanced = "mojo run examples/advanced_app.mojo"
+test = "mojo test"
+format = "mojo format"
+lint = "mojo lint"
 
 [dependencies]
 max = "*"

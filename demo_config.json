@@ -1,0 +1,52 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "workers": 4,
+    "max_request_size": 1048576,
+    "timeout": 30
+  },
+  "app": {
+    "name": "HyperMojo Ultimate Demo",
+    "version": "2.0.0",
+    "debug": true,
+    "description": "Ultimate demo showcasing all HyperMojo 2.0 features"
+  },
+  "security": {
+    "secret_key": "hypermojo-demo-secret-key-change-in-production",
+    "session_timeout": 3600,
+    "csrf_protection": true
+  },
+  "upload": {
+    "max_file_size": 5242880,
+    "upload_dir": "demo_uploads",
+    "allowed_extensions": [".jpg", ".png", ".gif", ".pdf", ".txt"],
+    "preserve_filename": false
+  },
+  "middleware": {
+    "rate_limit": {
+      "requests_per_minute": 100,
+      "requests_per_hour": 1000,
+      "burst_limit": 10
+    },
+    "compression": {
+      "enabled": true,
+      "min_size": 1024,
+      "level": 6
+    },
+    "cors": {
+      "enabled": true,
+      "origins": ["http://localhost:3000", "http://localhost:8080"],
+      "credentials": true
+    }
+  },
+  "templates": {
+    "directory": "demo_templates",
+    "cache_enabled": true
+  },
+  "static": {
+    "directory": "demo_static",
+    "url_prefix": "/assets",
+    "cache_max_age": 86400
+  }
+}

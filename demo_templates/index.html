@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>{{title}}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/session-demo">Sessions</a>
+            <a href="/docs">API Docs</a>
+            <a href="/api/v1/health">Health Check</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to HyperMojo 2.0!</h2>
+            <p>The ultimate web framework for the Mojo programming language.</p>
+            <div class="visit-counter">
+                <p>You've visited this page <strong>{{visit_count}}</strong> times.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <h3>🚀 Features</h3>
+            <ul>
+                {% for feature in features %}
+                <li>{{feature}}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="demo-links">
+            <h3>🔗 Try These Demos</h3>
+            <div class="demo-grid">
+                <a href="/session-demo" class="demo-card">
+                    <h4>Session Management</h4>
+                    <p>Experience server-side session storage</p>
+                </a>
+                <a href="/cookies" class="demo-card">
+                    <h4>Cookie Demo</h4>
+                    <p>See how cookies work</p>
+                </a>
+                <a href="/api/v1/health" class="demo-card">
+                    <h4>Health Check</h4>
+                    <p>JSON API endpoint</p>
+                </a>
+                <a href="/docs" class="demo-card">
+                    <h4>API Documentation</h4>
+                    <p>Auto-generated Swagger UI</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; {{current_year}} HyperMojo. Built with the Mojo programming language.</p>
+    </footer>
+
+    <script src="/assets/app.js"></script>
+</body>
+</html>
